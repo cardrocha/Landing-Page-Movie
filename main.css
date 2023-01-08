@@ -1,0 +1,28 @@
+.hero {
+}
+
+.hero__container {
+    max-width: 960px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+
+}
+
+.hero__links {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.hero__item {
+    margin: 200px;
+}
+
+.hero__item a {
+display: inline;
+margin: 0 1rem;
+
+}

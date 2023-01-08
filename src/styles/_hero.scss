@@ -1,0 +1,92 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../img/spiderman_hero_desktop.jpg);
+    text-align: center;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    
+    &__content {
+        max-width: 640px;
+
+        @media (max-width: 768px) {
+            max-width: 320px;
+        }
+
+        &__branding {
+            width: 100%;
+            margin: 0 auto;
+
+            iframe {
+                margin-right: 300px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-top: 240px;
+                    margin-left: 25px;
+                }
+            }
+
+        }
+        h3 {
+            font-size: 24px;
+            margin-right: 300px;
+            color: variaveis.$corDoBotao;
+            text-shadow: -1px 0 variaveis.$corDaBorda, 0 1px variaveis.$corDaBorda,
+                    1px 0 variaveis.$corDaBorda, 0 -1px variaveis.$corDaBorda;
+
+            @media (max-width: 768px) {
+                margin-left: 25px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.logo__container {
+    position: relative;
+    
+    &__img {
+        position: absolute;
+        max-height: 200px;
+        left: 135%;
+        top: -250px;
+    }
+
+    &__links {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 120px;
+        top: 350px;
+        list-style: none;
+        
+        &__items {
+            position: absolute;
+        }
+
+        button {
+            padding: 5px;
+            background-color: variaveis.$corDoBotao;
+            border: none;
+            border-radius: 10px;
+            border: 2px solid variaveis.$corDaBorda;
+            color: variaveis.$corTextoBranco;
+            cursor: pointer;
+
+            &:hover {
+                background-color: variaveis.$corDoHover;
+            }
+            
+        }
+    }
+}
