@@ -1,61 +1,65 @@
-@use 'hero';
-@use 'variaveis';
-@use 'sinopse';
-@use 'actors';
-@use 'faq';
-@use 'footer';
-@use 'header';
+@use "hero";
+@use "variaveis";
+@use "sinopse";
+@use "actors";
+@use "faq";
+@use "footer";
+@use "header";
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: variaveis.$fontPrincipal;
-    list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: variaveis.$fontPrincipal;
+  list-style: none;
+}
+
+html > body {
+  overflow-x: hidden;
 }
 
 body {
-    background-color: variaveis.$corDeFundo;
+  background-color: variaveis.$corDeFundo;
 
-    @media (max-width: 768px) {
-        height: 100%;
-    }
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-
-@mixin text ($fontSize: 24px) {
-    font-size: $fontSize;
-    line-height: $fontSize + 10px;
-
+@mixin text($fontSize: 24px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
 }
 
-@mixin title ($fontSize: 50px) {
-    @include text($fontSize);
-    color: variaveis.$corTextoBranco;
+@mixin title($fontSize: 50px) {
+  @include text($fontSize);
+  color: variaveis.$corTextoBranco;
 }
 
 .title {
-    @include title;
+  @include title;
 }
 
 .text {
-    @include text;
+  @include text;
 }
 
 .text--medium {
-    @include text(30px)
+  @include text(30px);
 }
 
 .text--small {
-    @include text(14px);
+  @include text(14px);
 }
 
 .text--variante {
-    @include text(18px);
+  @include text(18px);
 }
 
 hr {
-    background-color: variaveis.$corDaBorda;
-    padding: 5px;
-    border: none;
+  background-color: variaveis.$corDaBorda;
+  padding: 5px;
+  border: none;
+  width: 100%;
 }

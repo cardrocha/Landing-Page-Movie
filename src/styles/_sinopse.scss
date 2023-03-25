@@ -1,25 +1,25 @@
 .sinopse {
-    padding: 5.6vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  padding: 5.6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    @media (max-width: 768px) {
-        h2 {
-            font-size: 34px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        display: block;
-
-        img {
-            width: 100%;
-        }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 34px;
     }
 
-    &__imagem {
-        max-height: 300px;
+    p {
+      font-size: 18px;
     }
+
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__imagem {
+    max-height: 300px;
+  }
 }

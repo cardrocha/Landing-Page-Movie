@@ -1,38 +1,43 @@
-@use 'variaveis';
+@use "variaveis";
 
 .header {
-        align-items: center;
-        background-color: variaveis.$corDoBotao;
-        display: flex;
-        justify-content: space-between;
-        min-height: 70px;
+  align-items: center;
+  background-color: variaveis.$corDoBotao;
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
 
-        h2 {
-                margin-left: 30px;
+  h2 {
+    margin-left: 30px;
+  }
+
+  &__container {
+    &__links {
+      &__item {
+        font-size: 18px;
+        font-weight: bold;
+        display: inline;
+        margin-left: 10px;
+        margin-right: 20px;
+        a {
+          text-decoration: none;
+          color: variaveis.$corDaBorda;
         }
 
-        &__container {
-                &__links {
-                        &__item {
-                                font-size: 16px;
-                                display: inline;
-                                margin-left: 10px;
-                                margin-right: 20px;
-                                a {
-                                        text-decoration: none;
-                                        color: variaveis.$corDaBorda;
-                                }
-
-                                @media (max-width: 768px) {
-                                        display: block;
-                                        margin-top: 5px;
-                                }
-                        }
-                }
-        }
+        a:hover {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+      }
 
         @media (max-width: 768px) {
-        font-size: 22px;
-        text-align: center;
+          display: block;
+          margin-top: 5px;
         }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+    text-align: center;
+  }
 }
