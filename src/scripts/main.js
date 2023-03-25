@@ -13,3 +13,27 @@ function abreOuFechaResposta(elemento) {
 
     elementoPai.classList.toggle(classe);
 }
+
+function openMenu() {
+    if (itens.style.display == 'inline') {
+        itens.style.display = 'none'
+        screenNav.style.background = "transparent";
+        screenNav.style.transition = "background .3s ease";
+    } else {
+        itens.style.display = 'inline'
+        icon.style.marginLeft = "-10px"
+        screenNav.style.background = "#fff"
+        screenNav.style.transform = "translateX(0%)";
+        screenNav.style.transition = "background .3s ease";
+        screenNav.style.padding = "20px";
+    }
+}
+
+function outroMenu() {
+    if(window.innerWidth >= 768) {
+        itens.style.display = "inline";
+        screenNav.style.background = "transparent";
+    } else {
+        itens.style.display = "none";
+    }
+}

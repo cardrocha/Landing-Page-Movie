@@ -12,11 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onresize="outroMenu()">
   <header class="header">
     <h2>Homem-Aranha Atraves do Aranhaverso</h2>
-    <div class="header__container">
-      <ul class="header__container__links">
+    <div id="screenNav" class="header__container">    
+      <ion-icon id="icon" class="header__container__menu" onclick="openMenu()" name="menu-outline"></ion-icon>
+      <ul id="itens" class="header__container__links">
         <li class="header__container__links__item">
           <a href="#sinopse">Sinopse</a>
         </li>
@@ -120,6 +121,8 @@
   <footer class="footer">
     <h2 class="text--small">Todos direitos reservados Sony Pictures Brasil e Marvel Brasil - 2023</h2>
   </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./dist/js/main.js"></script>
 </body>
 
